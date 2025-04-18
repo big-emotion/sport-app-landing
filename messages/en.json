@@ -1,0 +1,43 @@
+{
+  "header": {
+    "title": "Find the best sports venues near you",
+    "subtitle": "Gather your team, discover new venues and experience sports like never before. Sport-App connects you to your passion, wherever you are.",
+    "cta": "Get notified of the app release",
+    "app_preview_alt": "Sport-App interface preview"
+  },
+  "features": {
+    "title": "Features"
+  },
+  "testimonials": {
+    "title": "User Reviews"
+  },
+  "gallery": {
+    "title": "Gallery"
+  },
+  "newsletter": {
+    "title": "Be the first to know",
+    "subtitle": "Subscribe to our newsletter to receive the latest updates from Sport-App.",
+    "placeholder": "Email address",
+    "button": "Subscribe"
+  },
+  "faq": {
+    "title": "FAQ",
+    "questions": {
+      "free": "Is it free?",
+      "sports": "What sports are available?",
+      "suggest": "Can I suggest a venue?",
+      "apps": "Will there be an Android/iOS app?"
+    }
+  },
+  "footer": {
+    "legal": "Legal notices",
+    "copyright": "© 2024"
+  },
+  "metadata": {
+    "title": "Sport-App - Find Sports Venues Near You",
+    "description": "Discover and book the best sports venues in your area. Connect with other players and organize games easily with Sport-App."
+  },
+  "images": {
+    "app_preview": "Sport-App interface preview"
+  }
+} 
