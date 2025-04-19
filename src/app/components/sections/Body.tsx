@@ -27,7 +27,7 @@ export function Body() {
                 {t('title')}
             </h2>
 
-            <div className="flex flex-col gap-16">
+            <div className="flex flex-col sm:gap-16 gap-8">
                 {/* Première ligne de cartes */}
                 <motion.div
                     className="flex flex-col sm:flex-row justify-center items-center sm:gap-16 gap-8"
