@@ -3,7 +3,7 @@ import "../globals.css";
 import React from 'react';
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
-import { routing } from "@/src/i18n/routing";
+import { routing } from "@/i18n/routing";
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata(): Promise<Metadata> {
