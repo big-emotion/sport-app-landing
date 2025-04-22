@@ -20,9 +20,10 @@ const item = {
 
 export function Body() {
     const t = useTranslations('features');
+    const y = useTranslations('testimonials');
 
     return (
-        <div className="flex flex-col bg-amber-50 h-auto m-8 sm:m-10 lg:m-20 h-[10000px]" >
+        <div className="flex flex-col bg-amber-50  m-8 sm:m-10 lg:m-20 h-[10000px]" >
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black">
                 {t('title')}
             </h2>

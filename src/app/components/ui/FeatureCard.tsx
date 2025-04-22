@@ -13,7 +13,7 @@ export function FeatureCard({ titleKey, subtitleKey }: FeatureCardProps) {
         justify-center gap-3 py-12">
             <div className="bg-yellow-400 w-20 h-20">img</div>
             <h3 className="font-bold text-2xl text-black">{t(titleKey)}</h3>
-            <p className="text-lg text-gray-700">{t(subtitleKey)}</p>
+            <p className="text-base text-gray-700">{t(subtitleKey)}</p>
         </div>
     );
 }
