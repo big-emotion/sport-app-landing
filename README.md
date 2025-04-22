@@ -58,6 +58,33 @@ For the best development experience:
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Deployment
+
+### Vercel CLI
+
+To run the project locally with Vercel:
+```bash
+# Install Vercel CLI globally
+npm i -g vercel
+
+# Run the development server
+vercel dev
+```
+
+### Vercel Deployment
+
+The project is deployed on Vercel with the following setup:
+
+- **Production**: Main branch is deployed to [https://sport-app-landing.vercel.app/fr](https://sport-app-landing.vercel.app/fr)
+- **Preview**: All branches pushed to GitHub automatically trigger preview deployments
+- **Development**: Use `vercel dev` for local development
+
+### GitHub Integration
+
+This project is linked to the BIG EMOTION GitHub repository. All pushes to the repository will trigger automatic deployments:
+- Main branch → Production
+- Feature branches → Preview deployments
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
