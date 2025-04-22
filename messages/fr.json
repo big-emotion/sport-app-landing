@@ -14,6 +14,17 @@
   "gallery": {
     "title": "Galerie"
   },
+  "advantage": {
+    "title": "Pourquoi Sport-App ?",
+    "access_title": "Accessibilité",
+    "access_subtitle": "Accédez aux terrains et aux sports près de chez vous",
+    "commu_title": "Communauté",
+    "commu_subtitle": "Échangez et partagez avec d'autres passionnés",
+    "discovery_title": "Découverte",
+    "discovery_subtitle": "Explorez de nouveaux lieux pour pratiquer vos activités",
+    "multisport_title": "Multisport",
+    "multisport_subtitle": "Une plateforme pour tous les types de sports"
+  },
   "newsletter": {
     "title": "Soyez les premiers informés",
     "subtitle": "Inscrivez-vous à notre newsletter pour recevoir les dernières actualites de Sport-App.",
