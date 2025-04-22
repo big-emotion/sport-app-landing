@@ -8,7 +8,7 @@ const container = {
     hidden: {},
     show: {
         transition: {
-            staggerChildren: 0.3,
+            staggerChildren: 0.5,
         },
     },
 };
@@ -18,9 +18,8 @@ const item = {
     show: { opacity: 1, y: 0 },
 };
 
-export function Body() {
+export function Feature() {
     const t = useTranslations('features');
-    const y = useTranslations('testimonials');
 
     return (
         <div className="flex flex-col bg-amber-50  m-8 sm:m-10 lg:m-20 h-[10000px]" >
