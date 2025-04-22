@@ -1,34 +1,64 @@
 'use client';
-
+import { motion } from 'framer-motion';
 import {useTranslations} from "next-intl";
 
+
 export default function Galerie() {
-    const t = useTranslations('gallery');
+    const t = useTranslations('gallery')
     return (
         <div>
+
+
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black">{t('title')}</h2>
             <div className="p-10 flex flex-col lg:flex-row items-start gap-8 min-h-screen bg-white justify-center">
                 {/* Bloc de gauche : téléphones */}
                 <div className="flex items-end relative justify-center w-full lg:w-auto">
-                    <div className="h-[300px] w-[140px] sm:h-[400px] sm:w-[200px] bg-yellow-400 z-10 rounded-2xl flex justify-center items-center">
+                    <motion.div
+                        className="h-[300px] w-[140px] sm:h-[400px] sm:w-[200px] bg-yellow-400 z-10 rounded-2xl flex justify-center items-center"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                    >
                         tel 1
-                    </div>
-                    <div className="h-[320px] w-[140px] sm:h-[500px] sm:w-[200px] bg-red-500 -translate-x-6 sm:-translate-x-10 z-20 rounded-2xl flex justify-center items-center">
+                    </motion.div>
+                    <motion.div
+                        className="h-[320px] w-[140px] sm:h-[500px] sm:w-[200px] bg-red-500 -translate-x-6 sm:-translate-x-10 z-20 rounded-2xl flex justify-center items-center"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 1 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                    >
                         tel 2
-                    </div>
+                    </motion.div>
                 </div>
+
 
                 {/* Bloc de droite : ordi + téléphone */}
                 <div className="flex items-end relative justify-center w-full lg:w-auto">
-                    <div className="h-[350px] w-full sm:h-[550px] sm:w-[550px] bg-purple-600 rounded-2xl flex justify-center items-center z-10">
+                    <motion.div
+                        className="h-[350px] w-full sm:h-[550px] sm:w-[550px] bg-purple-600 rounded-2xl flex justify-center items-center z-10"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 2 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                    >
                         ordi
-                    </div>
-                    <div className="h-[300px] w-[140px] sm:h-[400px] sm:w-[200px] bg-blue-400 rounded-2xl flex justify-center items-center z-20 -translate-x-10 translate-y-5 sm:-translate-x-30 sm:translate-y-20">
+                    </motion.div>
+                    <motion.div
+                        className="h-[300px] w-[140px] sm:h-[400px] sm:w-[200px] bg-blue-400 rounded-2xl flex justify-center items-center z-20 -translate-x-10 translate-y-5 sm:-translate-x-30 sm:translate-y-20"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 2.8 }}
+                        viewport={{ once: true, amount: 0.1 }}
+                    >
                         téléphone
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
     );
-
 }
+
+
+
