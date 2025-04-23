@@ -6,12 +6,12 @@ interface TestComponentProps {
 
 export const TestComponent: React.FC<TestComponentProps> = ({ name }) => {
   const [count, setCount] = useState(0);
-  
+
   const handleClick = () => {
     setCount(count + 1);
   };
 
-  if (count) {
+  if (count === 0) {
     return null;
   }
 
@@ -24,4 +24,4 @@ export const TestComponent: React.FC<TestComponentProps> = ({ name }) => {
       </button>
     </div>
   );
-}; 
+};
