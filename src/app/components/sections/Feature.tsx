@@ -1,65 +1,71 @@
-'use client'
+'use client';
 
-import { useTranslations } from "next-intl";
-import { FeatureCard } from "@/src/app/components/ui/FeatureCard";
-import { motion } from "framer-motion";
+import { useTranslations } from 'next-intl';
+import { motion, Variants } from 'framer-motion';
+import { FeatureCard } from '@/app/components/ui/FeatureCard';
+import React, { JSX } from 'react';
 
-const container = {
-    hidden: {},
-    show: {
-        transition: {
-            staggerChildren: 0.5,
-        },
+const container: Variants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.5,
     },
+  },
 };
 
-const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
+const item: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 },
 };
 
-export function Feature() {
-    const t = useTranslations('features');
+// Typage des objets de feature
+interface FeatureEntry {
+  titleKey: string;
+  subtitleKey: string;
+}
 
-    return (
-        <div className="flex flex-col bg-amber-50  m-8 sm:m-10 lg:m-20 h-[10000px]" >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black">
-                {t('title')}
-            </h2>
+export function Feature(): JSX.Element {
+  const t = useTranslations('features');
 
-            <div className="flex flex-col sm:gap-16 gap-8">
-                {/* Première ligne de cartes */}
-                <motion.div
-                    className="flex flex-col sm:flex-row justify-center items-center sm:gap-16 gap-8"
-                    variants={container}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.3 }}
-                >
-                    <motion.div variants={item} >
-                        <FeatureCard titleKey="localisation" subtitleKey="subtitle_localisation" />
-                    </motion.div>
-                    <motion.div variants={item} >
-                        <FeatureCard titleKey="sport" subtitleKey="subtitle_sport" />
-                    </motion.div>
-                </motion.div>
+  const featureRows: FeatureEntry[][] = [
+    [
+      { titleKey: 'localisation', subtitleKey: 'subtitle_localisation' },
+      { titleKey: 'sport', subtitleKey: 'subtitle_sport' },
+    ],
+    [
+      { titleKey: 'share', subtitleKey: 'subtitle_share' },
+      { titleKey: 'social', subtitleKey: 'subtitle_social' },
+    ],
+  ];
 
-                {/* Deuxième ligne de cartes */}
-                <motion.div
-                    className="flex flex-col sm:flex-row justify-center items-center sm:gap-16 gap-8"
-                    variants={container}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.3 }}
-                >
-                    <motion.div variants={item} >
-                        <FeatureCard titleKey="share" subtitleKey="subtitle_share" />
-                    </motion.div>
-                    <motion.div variants={item} >
-                        <FeatureCard titleKey="social" subtitleKey="subtitle_social" />
-                    </motion.div>
-                </motion.div>
-            </div>
-        </div>
-    );
+  return (
+    <div className="flex flex-col m-8 sm:m-10 lg:m-20">
+      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black">
+        {t('title')}
+      </h2>
+
+      <div className="flex flex-col sm:gap-16 gap-8">
+        {featureRows.map((row, rowIndex) => (
+          <motion.div
+            key={rowIndex}
+            className="flex flex-col sm:flex-row justify-center items-stretch sm:gap-16 gap-8"
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {row.map((feature, index) => (
+              <motion.div key={index} variants={item} className="h-full">
+                <FeatureCard
+                  titleKey={feature.titleKey}
+                  subtitleKey={feature.subtitleKey}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
 }
