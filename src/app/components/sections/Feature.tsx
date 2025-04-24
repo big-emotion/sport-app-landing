@@ -20,7 +20,6 @@ const item: Variants = {
   show: { opacity: 1, y: 0 },
 };
 
-// Typage des objets de feature
 interface FeatureEntry {
   titleKey: string;
   subtitleKey: string;
