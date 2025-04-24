@@ -1,11 +1,15 @@
 import { useTranslations } from 'next-intl';
+import { JSX } from 'react';
 
 interface FeatureCardProps {
   titleKey: string;
   subtitleKey: string;
 }
 
-export function FeatureCard({ titleKey, subtitleKey }: FeatureCardProps) {
+export function FeatureCard({
+  titleKey,
+  subtitleKey,
+}: FeatureCardProps): JSX.Element {
   const t = useTranslations('features');
 
   return (

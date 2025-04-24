@@ -1,9 +1,10 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { motion, Variants } from 'framer-motion';
-import { FeatureCard } from '@/app/components/ui/FeatureCard';
+import { useTranslations } from 'next-intl';
 import React, { JSX } from 'react';
+
+import { FeatureCard } from '@/app/components/ui/FeatureCard';
 
 const container: Variants = {
   hidden: {},
