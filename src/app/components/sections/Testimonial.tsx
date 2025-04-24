@@ -1,6 +1,7 @@
 'use client';
 import { motion, Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { JSX } from 'react';
 
 const transition = { duration: 0.8 };
 const viewportConfig = { once: true, amount: 0.3 };
@@ -19,7 +20,7 @@ const item: Variants = {
   show: { opacity: 1, y: 0 },
 };
 
-export function Testimonial() {
+export function Testimonial(): JSX.Element {
   const t = useTranslations('testimonials');
 
   return (
