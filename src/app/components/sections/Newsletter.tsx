@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Button } from '@/src/app/components/ui/Button';
+import { motion } from 'framer-motion';
 
 export default function Newsletter() {
   const t = useTranslations('newsletter');
@@ -12,21 +13,29 @@ export default function Newsletter() {
       </h2>
 
       <div className="flex justify-center">
-        <div className="w-full max-w-md bg-white flex flex-col gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="w-full max-w-md bg-white flex flex-col gap-6"
+        >
           <p className="text-lg text-gray-600 text-center">{t('subtitle')}</p>
 
           <form className="flex gap-4">
-            <input
+            <motion.input
+              whileFocus={{ scale: 1.02 }}
               type="email"
               placeholder={t('placeholder')}
               required
               className="flex-1 px-6 py-3 rounded-lg border border-gray-300 focus:outline-none text-black"
             />
-            <Button className="bg-yellow-300 px-5" type="submit" size="md">
-              {t('button')}
-            </Button>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button className="bg-yellow-300 py-3 px-5" type="submit" size="md">
+                {t('button')}
+              </Button>
+            </motion.div>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
