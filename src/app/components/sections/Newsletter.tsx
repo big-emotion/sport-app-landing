@@ -1,11 +1,14 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { Button } from '@/src/app/components/ui/Button';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
+import { JSX } from 'react';
 
-export default function Newsletter() {
+import { Button } from '../ui/Button';
+
+export default function Newsletter(): JSX.Element {
   const t = useTranslations('newsletter');
+
   return (
     <div>
       <motion.h2
@@ -37,7 +40,11 @@ export default function Newsletter() {
               className="flex-1 px-6 py-3 rounded-lg border border-gray-300 focus:outline-none text-black"
             />
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button className="bg-yellow-300 py-3 px-5" type="submit" size="md">
+              <Button
+                className="bg-yellow-300 py-3 px-5"
+                type="submit"
+                size="md"
+              >
                 {t('button')}
               </Button>
             </motion.div>
