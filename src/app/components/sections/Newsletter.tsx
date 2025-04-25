@@ -40,11 +40,7 @@ export default function Newsletter(): JSX.Element {
               className="flex-1 px-6 py-3 rounded-lg border border-gray-300 focus:outline-none text-black"
             />
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                className="bg-yellow-300 py-3 px-5"
-                type="submit"
-                size="md"
-              >
+              <Button className="py-3 px-5" type="submit" size="md">
                 {t('button')}
               </Button>
             </motion.div>
