@@ -8,15 +8,22 @@ export default function Newsletter() {
   const t = useTranslations('newsletter');
   return (
     <div>
-      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black">
+      <motion.h2
+        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        viewport={{ once: true }}
+      >
         {t('title')}
-      </h2>
+      </motion.h2>
 
       <div className="flex justify-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
+          viewport={{ once: true }}
           className="w-full max-w-md bg-white flex flex-col gap-6"
         >
           <p className="text-lg text-gray-600 text-center">{t('subtitle')}</p>
