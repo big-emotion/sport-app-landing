@@ -21,12 +21,18 @@
     "button": "Subscribe"
   },
   "faq": {
-    "title": "FAQ",
+    "title": "Frequently Asked Questions",
     "questions": {
       "free": "Is it free?",
-      "sports": "What sports are available?",
-      "suggest": "Can I suggest a venue?",
+      "sports": "Which sports are available?",
+      "suggest": "Can I suggest a location?",
       "apps": "Will there be an Android/iOS app?"
+    },
+    "answers": {
+      "free": "Yes, our service is free for users.",
+      "sports": "We offer a wide range of sports.",
+      "suggest": "Yes, you can suggest a location through your account.",
+      "apps": "Yes, we are planning an app for Android and iOS."
     }
   },
   "footer": {
