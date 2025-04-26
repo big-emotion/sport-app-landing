@@ -5,25 +5,26 @@ import { useTranslations } from 'next-intl';
 import { JSX, useState } from 'react';
 
 interface FAQItem {
-  question: string;
-  answer: string;
+  questionKey: string;
+  answerKey: string;
 }
 
 const faqData: FAQItem[] = [
   {
-    question: 'Comment fonctionne votre service ?',
-    answer:
-      'Notre service fonctionne en vous connectant avec les meilleurs experts selon vos besoins.',
+    questionKey: 'free',
+    answerKey: 'free',
   },
   {
-    question: 'Quels sont vos tarifs ?',
-    answer:
-      'Nos tarifs sont personnalisés en fonction de votre projet. Contactez-nous pour un devis.',
+    questionKey: 'sports',
+    answerKey: 'sports',
   },
   {
-    question: 'Puis-je annuler mon abonnement à tout moment ?',
-    answer:
-      'Oui, vous pouvez annuler votre abonnement à tout moment via votre compte client.',
+    questionKey: 'suggest',
+    answerKey: 'suggest',
+  },
+  {
+    questionKey: 'apps',
+    answerKey: 'apps',
   },
 ];
 
@@ -62,7 +63,9 @@ export default function Faq(): JSX.Element {
                 onClick={() => toggleFAQ(index)}
                 className="w-full text-left px-6 py-4 flex justify-between items-center bg-white text-black"
               >
-                <span className="font-medium">{item.question}</span>
+                <span className="font-medium">
+                  {t(`questions.${item.questionKey}`)}
+                </span>
                 <span>{openIndex === index ? '-' : '+'}</span>
               </button>
 
@@ -76,7 +79,7 @@ export default function Faq(): JSX.Element {
                     transition={{ duration: 0.5 }}
                     className="px-6 py-4 text-black overflow-hidden"
                   >
-                    <div>{item.answer}</div>
+                    <div>{t(`answers.${item.answerKey}`)}</div>
                   </motion.div>
                 )}
               </AnimatePresence>
