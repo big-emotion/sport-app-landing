@@ -37,36 +37,51 @@ export default function Faq(): JSX.Element {
 
   return (
     <div className="p-4">
-      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black">
+      <motion.h2
+        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black"
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         {t('title')}
-      </h2>
+      </motion.h2>
 
       <div className="space-y-4 max-w-lg mx-auto">
         {faqData.map((item, index) => (
-          <div key={index} className="border-b  overflow-hidden">
-            <button
-              onClick={() => toggleFAQ(index)}
-              className="w-full text-left px-6 py-4 flex justify-between items-center bg-white text-black"
-            >
-              <span className="font-medium">{item.question}</span>
-              <span>{openIndex === index ? '-' : '+'}</span>
-            </button>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="border-b overflow-hidden">
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full text-left px-6 py-4 flex justify-between items-center bg-white text-black"
+              >
+                <span className="font-medium">{item.question}</span>
+                <span>{openIndex === index ? '-' : '+'}</span>
+              </button>
 
-            <AnimatePresence initial={false}>
-              {openIndex === index && (
-                <motion.div
-                  key="content"
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="px-6 py-4 text-black  overflow-hidden"
-                >
-                  <div>{item.answer}</div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+              <AnimatePresence initial={false}>
+                {openIndex === index && (
+                  <motion.div
+                    key="content"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="px-6 py-4 text-black overflow-hidden"
+                  >
+                    <div>{item.answer}</div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </motion.div>
         ))}
       </div>
     </div>
