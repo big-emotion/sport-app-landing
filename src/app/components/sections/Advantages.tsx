@@ -9,6 +9,33 @@ import { AccessItem } from '@/app/components/ui/AccessItem';
 export default function Advantages(): JSX.Element {
   const t = useTranslations('advantage');
 
+  const items = [
+    {
+      title: t('access_title'),
+      subtitle: t('access_subtitle'),
+      delay: 0.2,
+      direction: -1,
+    },
+    {
+      title: t('commu_title'),
+      subtitle: t('commu_subtitle'),
+      delay: 0.4,
+      direction: 1,
+    },
+    {
+      title: t('discovery_title'),
+      subtitle: t('discovery_subtitle'),
+      delay: 0.6,
+      direction: -1,
+    },
+    {
+      title: t('multisport_title'),
+      subtitle: t('multisport_subtitle'),
+      delay: 0.8,
+      direction: 1,
+    },
+  ];
+
   return (
     <div>
       <motion.h2
@@ -21,60 +48,28 @@ export default function Advantages(): JSX.Element {
         {t('title')}
       </motion.h2>
 
-      <div className="flex flex-col gap-10 items-center">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-          <motion.div
-            className="flex"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true, amount: 0.3 }}
+      <div className="flex gap-10 items-center justify-center">
+        {[0, 1].map(col => (
+          <div
+            key={col}
+            className="flex flex-col justify-center items-center gap-10"
           >
-            <AccessItem
-              title={t('access_title')}
-              subtitle={t('access_subtitle')}
-            />
-          </motion.div>
-          <motion.div
-            className="flex"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <AccessItem
-              title={t('commu_title')}
-              subtitle={t('commu_subtitle')}
-            />
-          </motion.div>
-        </div>
-
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-          <motion.div
-            className="flex"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <AccessItem
-              title={t('discovery_title')}
-              subtitle={t('discovery_subtitle')}
-            />
-          </motion.div>
-          <motion.div
-            className="flex"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <AccessItem
-              title={t('multisport_title')}
-              subtitle={t('multisport_subtitle')}
-            />
-          </motion.div>
-        </div>
+            {items
+              .filter((_, idx) => idx % 2 === col)
+              .map(({ title, subtitle, delay, direction }, idx) => (
+                <motion.div
+                  key={idx}
+                  className="flex"
+                  initial={{ opacity: 0, x: 50 * direction }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
+                  <AccessItem title={title} subtitle={subtitle} />
+                </motion.div>
+              ))}
+          </div>
+        ))}
       </div>
     </div>
   );
