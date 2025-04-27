@@ -12,7 +12,6 @@ export function Galerie(): JSX.Element {
         {t('title')}
       </h2>
       <div className="p-10 flex flex-col lg:flex-row items-start gap-8 min-h-screen bg-white justify-center">
-        {/* Bloc de gauche : téléphones */}
         <div className="flex items-end relative justify-center w-full lg:w-auto">
           <motion.div
             className="h-[300px] w-[140px] sm:h-[400px] sm:w-[200px] bg-yellow-400 z-10 rounded-2xl flex justify-center items-center"
@@ -34,7 +33,6 @@ export function Galerie(): JSX.Element {
           </motion.div>
         </div>
 
-        {/* Bloc de droite : ordi + téléphone */}
         <div className="flex items-end relative justify-center w-full lg:w-auto">
           <motion.div
             className="h-[350px] w-full sm:h-[550px] sm:w-[550px] bg-purple-600 rounded-2xl flex justify-center items-center z-10"
