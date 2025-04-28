@@ -6,13 +6,34 @@
     "app_preview_alt": "Aperçu de l'interface Sport-App"
   },
   "features": {
-    "title": "Fonctionnalités"
+    "title": "Fonctionnalités clés",
+    "localisation": "Localiser des terrains",
+    "subtitle_localisation": "Trouvez facilement les lieux pour pratiquer votre sport",
+    "sport": "Ajouter vos sports",
+    "subtitle_sport": "Vous pratiquez un sport rare ? Créez-le dans l'app",
+    "share": "Partage de contenu",
+    "subtitle_share": "Photos, vidéos, commentaires: créez une vraie communauté",
+    "social": "Interactions sociales",
+    "subtitle_social": "Likez, suivez, discutez entre passionnés"
   },
   "testimonials": {
-    "title": "Avis utilisateurs"
+    "title": "Avis utilisateurs",
+    "subtitle": "Je suis vraiment impatient de la sortie de Sport-App ! Avoir un outil pour échanger des lieux et rencontrer des sportifs près de chez moi me serait très utile",
+    "name": "Thomas"
   },
   "gallery": {
     "title": "Galerie"
+  },
+  "advantage": {
+    "title": "Pourquoi Sport-App ?",
+    "access_title": "Accessibilité",
+    "access_subtitle": "Accédez aux terrains et aux sports près de chez vous",
+    "commu_title": "Communauté",
+    "commu_subtitle": "Échangez et partagez avec d'autres passionnés",
+    "discovery_title": "Découverte",
+    "discovery_subtitle": "Explorez de nouveaux lieux pour pratiquer vos activités",
+    "multisport_title": "Multisport",
+    "multisport_subtitle": "Une plateforme pour tous les types de sports"
   },
   "newsletter": {
     "title": "Soyez les premiers informés",
