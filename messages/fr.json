@@ -48,6 +48,12 @@
       "sports": "Quels sports sont disponibles ?",
       "suggest": "Puis-je proposer un lieu ?",
       "apps": "Y aura-t-il une appli Android/iOS ?"
+    },
+    "answers": {
+      "free": "Oui, notre service est gratuit pour les utilisateurs.",
+      "sports": "Nous proposons une large gamme de sports.",
+      "suggest": "Oui, vous pouvez proposer un lieu via votre compte.",
+      "apps": "Oui, nous prévoyons une application pour Android et iOS."
     }
   },
   "footer": {
