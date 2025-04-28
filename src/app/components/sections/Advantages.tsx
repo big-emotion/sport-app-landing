@@ -48,7 +48,7 @@ export default function Advantages(): JSX.Element {
         {t('title')}
       </motion.h2>
 
-      <div className="flex gap-10 items-center justify-center">
+      <div className="flex flex-col sm:flex-row gap-10 items-center justify-center">
         {[0, 1].map(col => (
           <div
             key={col}
