@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { JSX } from 'react';
+
 import { Section } from '@/app/components/ui/Section';
 
 export function Galerie(): JSX.Element {

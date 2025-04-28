@@ -2,6 +2,7 @@
 import { motion, Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { JSX } from 'react';
+
 import { Section } from '@/app/components/ui/Section';
 
 const transition = { duration: 0.8 };

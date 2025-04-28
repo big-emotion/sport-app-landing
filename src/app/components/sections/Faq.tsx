@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { JSX, useState } from 'react';
+
 import { Section } from '@/app/components/ui/Section';
 
 interface FAQItem {

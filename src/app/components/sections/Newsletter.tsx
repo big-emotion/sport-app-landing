@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { JSX } from 'react';
 
-import { Button } from '../ui/Button';
 import { Section } from '@/app/components/ui/Section';
+
+import { Button } from '../ui/Button';
 
 export default function Newsletter(): JSX.Element {
   const t = useTranslations('newsletter');
