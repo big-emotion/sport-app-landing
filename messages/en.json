@@ -6,7 +6,15 @@
     "app_preview_alt": "Sport-App interface preview"
   },
   "features": {
-    "title": "Features"
+    "title": "Key Features",
+    "localisation": "Find Courts",
+    "subtitle_localisation": "Easily locate places to practice your sport",
+    "sport": "Add Your Sports",
+    "subtitle_sport": "Practicing a rare sport? Add it to the app",
+    "share": "Content Sharing",
+    "subtitle_share": "Photos, videos, comments: build a real community",
+    "social": "Social Interactions",
+    "subtitle_social": "Like, follow, and chat with other enthusiasts"
   },
   "testimonials": {
     "title": "User Reviews"
