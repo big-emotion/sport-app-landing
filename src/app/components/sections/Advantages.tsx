@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { JSX } from 'react';
 
 import { AccessItem } from '@/app/components/ui/AccessItem';
+import { Section } from '@/app/components/ui/Section';
 
 export default function Advantages(): JSX.Element {
   const t = useTranslations('advantage');
@@ -37,7 +38,7 @@ export default function Advantages(): JSX.Element {
   ];
 
   return (
-    <div>
+    <Section>
       <motion.h2
         className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black mt-16"
         initial={{ opacity: 0, y: -50 }}
@@ -48,7 +49,7 @@ export default function Advantages(): JSX.Element {
         {t('title')}
       </motion.h2>
 
-      <div className="flex gap-10 items-center justify-center">
+      <div className="flex flex-col sm:flex-row gap-10 items-center justify-center">
         {[0, 1].map(col => (
           <div
             key={col}
@@ -71,6 +72,6 @@ export default function Advantages(): JSX.Element {
           </div>
         ))}
       </div>
-    </div>
+    </Section>
   );
 }

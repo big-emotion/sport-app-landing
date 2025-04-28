@@ -3,6 +3,8 @@ import { motion, Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { JSX } from 'react';
 
+import { Section } from '@/app/components/ui/Section';
+
 const transition = { duration: 0.8 };
 const viewportConfig = { once: true, amount: 0.3 };
 
@@ -24,9 +26,9 @@ export function Testimonial(): JSX.Element {
   const t = useTranslations('testimonials');
 
   return (
-    <div className="px-4">
+    <Section>
       <motion.h2
-        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black mt-16"
+        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black"
         variants={item}
         initial="hidden"
         whileInView="show"
@@ -100,6 +102,6 @@ export function Testimonial(): JSX.Element {
           {t('name')}
         </motion.p>
       </div>
-    </div>
+    </Section>
   );
 }

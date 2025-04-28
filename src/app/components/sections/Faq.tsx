@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { JSX, useState } from 'react';
 
+import { Section } from '@/app/components/ui/Section';
+
 interface FAQItem {
   questionKey: string;
   answerKey: string;
@@ -37,7 +39,7 @@ export default function Faq(): JSX.Element {
   };
 
   return (
-    <div className="p-4">
+    <Section>
       <motion.h2
         className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black"
         whileInView={{ opacity: 1, y: 0 }}
@@ -87,6 +89,6 @@ export default function Faq(): JSX.Element {
           </motion.div>
         ))}
       </div>
-    </div>
+    </Section>
   );
 }

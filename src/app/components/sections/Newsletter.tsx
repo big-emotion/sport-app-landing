@@ -4,13 +4,15 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { JSX } from 'react';
 
+import { Section } from '@/app/components/ui/Section';
+
 import { Button } from '../ui/Button';
 
 export default function Newsletter(): JSX.Element {
   const t = useTranslations('newsletter');
 
   return (
-    <div>
+    <Section>
       <motion.h2
         className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black"
         initial={{ opacity: 0, y: 50 }}
@@ -47,6 +49,6 @@ export default function Newsletter(): JSX.Element {
           </form>
         </motion.div>
       </div>
-    </div>
+    </Section>
   );
 }
