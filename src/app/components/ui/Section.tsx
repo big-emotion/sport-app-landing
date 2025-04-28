@@ -16,7 +16,7 @@ export function Section({
   fullWidth = false,
 }: SectionProps): React.ReactElement {
   return (
-    <section id={id} className={`py-16 md:py-24 ${className ?? ''}`}>
+    <section id={id} className={`py-12 md:py-16 ${className ?? ''}`}>
       <div
         className={`mx-auto px-4 sm:px-6 lg:px-8 [&:not(.full-width)]:max-w-7xl ${fullWidth ? 'full-width' : ''}`}
       >
