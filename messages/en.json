@@ -6,13 +6,34 @@
     "app_preview_alt": "Sport-App interface preview"
   },
   "features": {
-    "title": "Features"
+    "title": "Key Features",
+    "localisation": "Find Courts",
+    "subtitle_localisation": "Easily locate places to practice your sport",
+    "sport": "Add Your Sports",
+    "subtitle_sport": "Practicing a rare sport? Add it to the app",
+    "share": "Content Sharing",
+    "subtitle_share": "Photos, videos, comments: build a real community",
+    "social": "Social Interactions",
+    "subtitle_social": "Like, follow, and chat with other enthusiasts"
   },
   "testimonials": {
-    "title": "User Reviews"
+    "title": "User Reviews",
+    "subtitle": "I'm really looking forward to the release of Sport-App! Having a tool to exchange locations and meet athletes near me would be very useful.",
+    "name": "Thomas"
   },
   "gallery": {
     "title": "Gallery"
+  },
+  "advantage": {
+    "title": "Why Sport-App?",
+    "access_title": "Accessibility",
+    "access_subtitle": "Access fields and sports near you",
+    "commu_title": "Community",
+    "commu_subtitle": "Connect and share with other enthusiasts",
+    "discovery_title": "Discovery",
+    "discovery_subtitle": "Explore new places to practice your activities",
+    "multisport_title": "Multisport",
+    "multisport_subtitle": "A platform for all types of sports"
   },
   "newsletter": {
     "title": "Be the first to know",
