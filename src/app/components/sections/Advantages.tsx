@@ -37,7 +37,7 @@ export default function Advantages(): JSX.Element {
   ];
 
   return (
-    <div>
+    <div className="m-8 sm:m-10 lg:m-10">
       <motion.h2
         className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black mt-16"
         initial={{ opacity: 0, y: -50 }}

@@ -37,7 +37,7 @@ export default function Faq(): JSX.Element {
   };
 
   return (
-    <div className="p-4">
+    <div className="m-8 sm:m-10 lg:m-20">
       <motion.h2
         className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black"
         whileInView={{ opacity: 1, y: 0 }}

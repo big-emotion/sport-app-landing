@@ -7,7 +7,7 @@ export function Galerie(): JSX.Element {
   const t = useTranslations('gallery');
 
   return (
-    <div>
+    <div className="m-8 sm:m-10 lg:m-20">
       <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black">
         {t('title')}
       </h2>

@@ -24,9 +24,9 @@ export function Testimonial(): JSX.Element {
   const t = useTranslations('testimonials');
 
   return (
-    <div className="px-4">
+    <div className="m-8 sm:m-10 lg:m-20">
       <motion.h2
-        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black mt-16"
+        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black"
         variants={item}
         initial="hidden"
         whileInView="show"
