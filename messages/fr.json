@@ -6,7 +6,15 @@
     "app_preview_alt": "Aperçu de l'interface Sport-App"
   },
   "features": {
-    "title": "Fonctionnalités"
+    "title": "Fonctionnalités clés",
+    "localisation": "Localiser des terrains",
+    "subtitle_localisation": "Trouvez facilement les lieux pour pratiquer votre sport",
+    "sport": "Ajouter vos sports",
+    "subtitle_sport": "Vous pratiquez un sport rare ? Créez-le dans l'app",
+    "share": "Partage de contenu",
+    "subtitle_share": "Photos, vidéos, commentaires: créez une vraie communauté",
+    "social": "Interactions sociales",
+    "subtitle_social": "Likez, suivez, discutez entre passionnés"
   },
   "testimonials": {
     "title": "Avis utilisateurs",
