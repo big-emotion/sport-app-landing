@@ -25,17 +25,16 @@
     "title": "Gallery"
   },
   "advantage": {
-  "title": "Why Sport-App?",
-  "access_title": "Accessibility",
-  "access_subtitle": "Access fields and sports near you",
-  "commu_title": "Community",
-  "commu_subtitle": "Connect and share with other enthusiasts",
-  "discovery_title": "Discovery",
-  "discovery_subtitle": "Explore new places to practice your activities",
-  "multisport_title": "Multisport",
-  "multisport_subtitle": "A platform for all types of sports"
-
-},
+    "title": "Why Sport-App?",
+    "access_title": "Accessibility",
+    "access_subtitle": "Access fields and sports near you",
+    "commu_title": "Community",
+    "commu_subtitle": "Connect and share with other enthusiasts",
+    "discovery_title": "Discovery",
+    "discovery_subtitle": "Explore new places to practice your activities",
+    "multisport_title": "Multisport",
+    "multisport_subtitle": "A platform for all types of sports"
+  },
   "newsletter": {
     "title": "Be the first to know",
     "subtitle": "Subscribe to our newsletter to receive the latest updates from Sport-App.",
