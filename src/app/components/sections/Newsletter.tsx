@@ -2,14 +2,31 @@
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 
 import { Section } from '@/app/components/ui/Section';
-
+import ConfirmModal from '@/app/components/ui/ConfirmModal';
 import { Button } from '../ui/Button';
 
 export default function Newsletter(): JSX.Element {
   const t = useTranslations('newsletter');
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const confirmSubscription = () => {
+    setIsModalOpen(false);
+    // Ici tu peux ajouter ta vraie logique d'envoi (API, etc.)
+    console.log('Inscription confirmée !');
+  };
+
+  const cancelSubscription = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <Section>
@@ -33,7 +50,7 @@ export default function Newsletter(): JSX.Element {
         >
           <p className="text-lg text-gray-600 text-center">{t('subtitle')}</p>
 
-          <form className="flex gap-4">
+          <form onSubmit={handleSubmit} className="flex gap-4">
             <motion.input
               whileFocus={{ scale: 1.02 }}
               type="email"
@@ -49,6 +66,12 @@ export default function Newsletter(): JSX.Element {
           </form>
         </motion.div>
       </div>
+
+      <ConfirmModal
+        isOpen={isModalOpen}
+        onConfirm={confirmSubscription}
+        onCancel={cancelSubscription}
+      />
     </Section>
   );
 }
