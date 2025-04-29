@@ -40,7 +40,7 @@ export default function Advantages(): JSX.Element {
   return (
     <Section>
       <motion.h2
-        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black mt-16"
+        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
