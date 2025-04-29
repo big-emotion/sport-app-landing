@@ -13,10 +13,10 @@ export function Galerie(): JSX.Element {
       <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black">
         {t('title')}
       </h2>
-      <div className="p-10 flex flex-col lg:flex-row items-start gap-8 min-h-screen bg-white justify-center">
+      <div className=" flex flex-col lg:flex-row items-start gap-8  bg-white justify-center">
         <div className="flex items-end relative justify-center w-full lg:w-auto">
           <motion.div
-            className="h-[300px] w-[140px] sm:h-[400px] sm:w-[200px] bg-yellow-400 z-10 rounded-2xl flex justify-center items-center"
+            className="h-[300px] w-[140px] sm:h-[400px] sm:w-[175px] bg-yellow-400 z-10 rounded-2xl flex justify-center items-center"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -25,7 +25,7 @@ export function Galerie(): JSX.Element {
             tel 1
           </motion.div>
           <motion.div
-            className="h-[320px] w-[140px] sm:h-[500px] sm:w-[200px] bg-red-500 -translate-x-6 sm:-translate-x-10 z-20 rounded-2xl flex justify-center items-center"
+            className="h-[320px] w-[140px] sm:h-[500px] sm:w-[175px] bg-red-500 -translate-x-6 sm:-translate-x-10 z-20 rounded-2xl flex justify-center items-center"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
@@ -37,7 +37,7 @@ export function Galerie(): JSX.Element {
 
         <div className="flex items-end relative justify-center w-full lg:w-auto">
           <motion.div
-            className="h-[350px] w-full sm:h-[550px] sm:w-[550px] bg-purple-600 rounded-2xl flex justify-center items-center z-10"
+            className="h-[350px] w-full sm:h-[500px] sm:w-[500px] bg-purple-600 rounded-2xl flex justify-center items-center z-10"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 2 }}
@@ -46,7 +46,7 @@ export function Galerie(): JSX.Element {
             ordi
           </motion.div>
           <motion.div
-            className="h-[300px] w-[140px] sm:h-[400px] sm:w-[200px] bg-blue-400 rounded-2xl flex justify-center items-center z-20 -translate-x-10 translate-y-5 sm:-translate-x-30 sm:translate-y-20"
+            className="h-[300px] w-[140px] sm:h-[400px] sm:w-[175px] bg-blue-400 rounded-2xl flex justify-center items-center z-20 -translate-x-10 translate-y-5 sm:-translate-x-30 sm:translate-y-20"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 2.8 }}
