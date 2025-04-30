@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { JSX } from 'react';
-import { Button } from './Button'; // Import du composant Button
+import { Button } from './Button';
 
 interface ConfirmModalProps {
   isOpen: boolean;
@@ -37,7 +37,6 @@ export default function ConfirmModal({
               Voulez-vous vraiment vous inscrire à la newsletter ?
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              {/* Remplacement des éléments button par le composant Button */}
               <Button
                 onClick={onCancel}
                 variant="secondary"

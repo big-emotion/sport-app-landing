@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { JSX, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 import { Section } from '@/app/components/ui/Section';
 import ConfirmModal from '@/app/components/ui/ConfirmModal';
@@ -18,10 +19,11 @@ export default function Newsletter(): JSX.Element {
     setIsModalOpen(true);
   };
 
+  const router = useRouter();
+
   const confirmSubscription = () => {
     setIsModalOpen(false);
-    // Ici tu peux ajouter ta vraie logique d'envoi (API, etc.)
-    console.log('Inscription confirmée !');
+    router.push('/confirmation?access=granted');
   };
 
   const cancelSubscription = () => {
