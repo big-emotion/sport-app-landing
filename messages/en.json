@@ -61,6 +61,19 @@
     "legal": "Legal notices",
     "copyright": "© 2024"
   },
+  "confirmation": {
+    "title": "Thank you for signing up!",
+    "button": "Back to homepage"
+  },
+  "modal": {
+    "title": "Confirm Subscription",
+    "subtitle": "Do you really want to subscribe to the newsletter?",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "confirm_title": "A confirmation email has been sent to your address.",
+    "confirm_subtitle": "Please click the link in the email to complete your newsletter subscription.",
+    "close": "Close"
+  },
   "metadata": {
     "title": "Sport-App - Find Sports Venues Near You",
     "description": "Discover and book the best sports venues in your area. Connect with other players and organize games easily with Sport-App."

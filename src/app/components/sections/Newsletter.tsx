@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import React, { JSX, useState } from 'react';
 
@@ -20,12 +19,7 @@ export default function Newsletter(): JSX.Element {
     setIsModalOpen(true);
   };
 
-  const router = useRouter();
-
-  const confirmSubscription = () => {
-    setIsModalOpen(false);
-    router.push('/confirmation?access=granted');
-  };
+  const confirmSubscription = () => {};
 
   const cancelSubscription = () => {
     setIsModalOpen(false);
