@@ -1,20 +1,26 @@
 'use client';
 
-import { useRouter, useSearchParams } from 'next/navigation';
-import { JSX, useEffect } from 'react';
+import { notFound, useSearchParams } from 'next/navigation';
+import { JSX, useEffect, useState } from 'react';
 
 import { Button } from '@/app/components/ui/Button';
+import { useRouter } from 'next/navigation';
 
-export default function ConfirmationPage(): JSX.Element {
+export default function ConfirmationPage(): JSX.Element | null {
   const searchParams = useSearchParams();
   const router = useRouter();
+  const [valid, setValid] = useState<boolean | null>(null);
 
   useEffect(() => {
     const access = searchParams.get('access');
     if (access !== 'granted') {
-      router.push('/');
+      notFound();
+    } else {
+      setValid(true);
     }
-  }, [searchParams, router]);
+  }, [searchParams]);
+
+  if (valid === null) return null;
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center text-black gap-6 px-4 text-center">
