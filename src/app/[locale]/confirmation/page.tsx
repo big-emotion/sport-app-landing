@@ -1,10 +1,9 @@
 'use client';
 
-import { notFound, useSearchParams } from 'next/navigation';
+import { notFound, useRouter, useSearchParams } from 'next/navigation';
 import { JSX, useEffect, useState } from 'react';
 
 import { Button } from '@/app/components/ui/Button';
-import { useRouter } from 'next/navigation';
 
 export default function ConfirmationPage(): JSX.Element | null {
   const searchParams = useSearchParams();
@@ -20,7 +19,9 @@ export default function ConfirmationPage(): JSX.Element | null {
     }
   }, [searchParams]);
 
-  if (valid === null) return null;
+  if (valid === null) {
+    return null;
+  }
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center text-black gap-6 px-4 text-center">
