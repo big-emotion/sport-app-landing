@@ -49,11 +49,11 @@ export default function Advantages(): JSX.Element {
         {t('title')}
       </motion.h2>
 
-      <div className="flex flex-col sm:flex-row gap-10 items-center justify-center">
+      <div className="flex flex-col sm:flex-row items-center justify-center">
         {[0, 1].map(col => (
           <div
             key={col}
-            className="flex flex-col justify-center items-center gap-10"
+            className="flex flex-col justify-center items-center gap-3 sm:gap-8"
           >
             {items
               .filter((_, idx) => idx % 2 === col)

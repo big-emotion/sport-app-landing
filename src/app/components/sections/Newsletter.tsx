@@ -33,7 +33,7 @@ export default function Newsletter(): JSX.Element {
         >
           <p className="text-lg text-gray-600 text-center">{t('subtitle')}</p>
 
-          <form className="flex gap-4">
+          <form className="flex flex-col sm:flex-row gap-4">
             <motion.input
               whileFocus={{ scale: 1.02 }}
               type="email"
