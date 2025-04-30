@@ -40,7 +40,7 @@ export default function Advantages(): JSX.Element {
   return (
     <Section>
       <motion.h2
-        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black mt-16"
+        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-12 text-black"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -49,11 +49,11 @@ export default function Advantages(): JSX.Element {
         {t('title')}
       </motion.h2>
 
-      <div className="flex flex-col sm:flex-row gap-10 items-center justify-center">
+      <div className="flex flex-col sm:flex-row items-center justify-center">
         {[0, 1].map(col => (
           <div
             key={col}
-            className="flex flex-col justify-center items-center gap-10"
+            className="flex flex-col justify-center items-center gap-3 sm:gap-8"
           >
             {items
               .filter((_, idx) => idx % 2 === col)

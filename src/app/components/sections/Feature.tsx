@@ -47,7 +47,7 @@ export function Feature(): JSX.Element {
           {t('title')}
         </h2>
 
-        <div className="flex flex-col sm:gap-16 gap-8">
+        <div className="flex flex-col justify-center items-center sm:gap-16 gap-8">
           {featureRows.map((row, rowIndex) => (
             <motion.div
               key={rowIndex}

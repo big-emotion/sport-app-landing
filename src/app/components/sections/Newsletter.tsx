@@ -51,7 +51,6 @@ export default function Newsletter(): JSX.Element {
           className="w-full max-w-md bg-white flex flex-col gap-6"
         >
           <p className="text-lg text-gray-600 text-center">{t('subtitle')}</p>
-
           <form onSubmit={handleSubmit} className="flex gap-4">
             <motion.input
               whileFocus={{ scale: 1.02 }}
