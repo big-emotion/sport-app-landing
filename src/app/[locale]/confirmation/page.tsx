@@ -1,10 +1,11 @@
 'use client';
 
-import { useSearchParams, useRouter } from 'next/navigation';
-import { useEffect } from 'react';
-import { Button } from '@/app/components/ui/Button'; // adapte le chemin si besoin
+import { useRouter, useSearchParams } from 'next/navigation';
+import { JSX, useEffect } from 'react';
 
-export default function ConfirmationPage() {
+import { Button } from '@/app/components/ui/Button';
+
+export default function ConfirmationPage(): JSX.Element {
   const searchParams = useSearchParams();
   const router = useRouter();
 

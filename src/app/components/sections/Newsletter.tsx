@@ -1,12 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import { JSX, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import React, { JSX, useState } from 'react';
 
-import { Section } from '@/app/components/ui/Section';
 import ConfirmModal from '@/app/components/ui/ConfirmModal';
+import { Section } from '@/app/components/ui/Section';
+
 import { Button } from '../ui/Button';
 
 export default function Newsletter(): JSX.Element {
