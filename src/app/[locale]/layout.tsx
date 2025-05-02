@@ -35,7 +35,7 @@ export default async function LocaleLayout({
           id="usercentrics-cmp"
           src="https://web.cmp.usercentrics.eu/ui/loader.js"
           data-draft="true"
-          data-settings-id="A3ru9_Fe-nmoSj"
+          data-settings-id="miPOuLpJILyezf"
           async
         ></script>
       </head>
