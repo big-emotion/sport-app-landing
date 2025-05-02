@@ -73,7 +73,9 @@ export default function Newsletter(): JSX.Element {
               required
               className="flex-1 px-6 py-3 rounded-lg border border-gray-300 focus:outline-none text-black"
             />
-            {error && <p className="text-sm text-red-500 px-2">{error}</p>}
+            {typeof error === 'string' && error.length > 0 && (
+              <p className="text-sm text-red-500 px-2">{error}</p>
+            )}
             <motion.div
               className="self-end"
               whileHover={{ scale: 1.05 }}
