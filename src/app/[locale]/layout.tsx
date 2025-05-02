@@ -35,7 +35,6 @@ export default async function LocaleLayout({
   }
 
   const renderUsercentrics = () => {
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (COOKIE_BOT_ID == null) {
       return null;
     }
