@@ -30,6 +30,15 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <script
+          id="usercentrics-cmp"
+          src="https://web.cmp.usercentrics.eu/ui/loader.js"
+          data-draft="true"
+          data-settings-id="A3ru9_Fe-nmoSj"
+          async
+        ></script>
+      </head>
       <body>
         <NextIntlClientProvider locale={locale}>
           <main className="min-h-screen bg-white">{children}</main>
