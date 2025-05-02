@@ -1,3 +1,4 @@
+// src/app/[locale]/layout.tsx
 import type { Metadata } from 'next';
 import '../globals.css';
 import { notFound } from 'next/navigation';
@@ -6,6 +7,11 @@ import { getTranslations } from 'next-intl/server';
 import React from 'react';
 
 import { routing } from '@/i18n/routing';
+
+// eslint-disable-next-line no-undef
+const ENV = process.env.NEXT_PUBLIC_NODE_ENV;
+// eslint-disable-next-line no-undef
+const COOKIE_BOT_ID = process.env.NEXT_PUBLIC_COOKIE_BOT_ID;
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('metadata');
@@ -28,17 +34,44 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  return (
-    <html lang={locale}>
-      <head>
+  const renderUsercentrics = () => {
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    if (COOKIE_BOT_ID == null) {
+      return null;
+    }
+
+    if (ENV === 'PROD') {
+      return (
+        <>
+          <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
+          <script
+            id="usercentrics-cmp"
+            src="https://web.cmp.usercentrics.eu/ui/loader.js"
+            data-settings-id={COOKIE_BOT_ID}
+            async
+          ></script>
+        </>
+      );
+    }
+
+    if (ENV === 'STAGING') {
+      return (
         <script
           id="usercentrics-cmp"
           src="https://web.cmp.usercentrics.eu/ui/loader.js"
           data-draft="true"
-          data-settings-id="miPOuLpJILyezf"
+          data-settings-id={COOKIE_BOT_ID}
           async
         ></script>
-      </head>
+      );
+    }
+
+    return null;
+  };
+
+  return (
+    <html lang={locale}>
+      <head>{renderUsercentrics()}</head>
       <body>
         <NextIntlClientProvider locale={locale}>
           <main className="min-h-screen bg-white">{children}</main>
