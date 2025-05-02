@@ -3,23 +3,41 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import React, { JSX, useState } from 'react';
+import { z } from 'zod';
 
 import ConfirmModal from '@/app/components/ui/ConfirmModal';
 import { Section } from '@/app/components/ui/Section';
-
 import { Button } from '../ui/Button';
+
+const NewsletterSchema = z.object({
+  email: z.string().email('Adresse email invalide'),
+});
 
 export default function Newsletter(): JSX.Element {
   const t = useTranslations('newsletter');
 
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const result = NewsletterSchema.safeParse({ email });
+
+    if (!result.success) {
+      const message = result.error.format().email?._errors?.[0];
+      setError(message ?? 'Erreur inconnue');
+      return;
+    }
+
+    setError(null);
     setIsModalOpen(true);
   };
 
-  const confirmSubscription = () => {};
+  const confirmSubscription = () => {
+    console.log("Confirmation de l'inscription pour:", email);
+  };
 
   const cancelSubscription = () => {
     setIsModalOpen(false);
@@ -46,15 +64,21 @@ export default function Newsletter(): JSX.Element {
           className="w-full max-w-md bg-white flex flex-col gap-6"
         >
           <p className="text-lg text-gray-600 text-center">{t('subtitle')}</p>
-          <form onSubmit={handleSubmit} className="flex gap-4">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-2">
             <motion.input
               whileFocus={{ scale: 1.02 }}
-              type="email"
               placeholder={t('placeholder')}
               required
+              value={email}
+              onChange={e => setEmail(e.target.value)}
               className="flex-1 px-6 py-3 rounded-lg border border-gray-300 focus:outline-none text-black"
             />
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            {error && <p className="text-sm text-red-500 px-2">{error}</p>}
+            <motion.div
+              className="self-end"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <Button className="py-3 px-5" type="submit" size="md">
                 {t('button')}
               </Button>
