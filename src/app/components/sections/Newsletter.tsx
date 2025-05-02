@@ -10,19 +10,20 @@ import { Section } from '@/app/components/ui/Section';
 
 import { Button } from '../ui/Button';
 
-const NewsletterSchema = z.object({
-  email: z.string().email('Adresse email invalide'),
-});
-
 export default function Newsletter(): JSX.Element {
   const t = useTranslations('newsletter');
 
-  const [email, setEmail] = useState('');
+  const NewsletterSchema = z.object({
+    email: z.string().email(t('invalid')),
+  });
+
   const [error, setError] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get('email');
 
     const result = NewsletterSchema.safeParse({ email });
 
@@ -66,16 +67,13 @@ export default function Newsletter(): JSX.Element {
           <p className="text-lg text-gray-600 text-center">{t('subtitle')}</p>
           <form onSubmit={handleSubmit} className="flex flex-col gap-2">
             <motion.input
+              name="email"
               whileFocus={{ scale: 1.02 }}
               placeholder={t('placeholder')}
               required
-              value={email}
-              onChange={e => setEmail(e.target.value)}
               className="flex-1 px-6 py-3 rounded-lg border border-gray-300 focus:outline-none text-black"
             />
-            {typeof error === 'string' && (
-              <p className="text-sm text-red-500 px-2">{error}</p>
-            )}
+            {error && <p className="text-sm text-red-500 px-2">{error}</p>}
             <motion.div
               className="self-end"
               whileHover={{ scale: 1.05 }}
