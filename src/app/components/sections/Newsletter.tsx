@@ -7,6 +7,7 @@ import { z } from 'zod';
 
 import ConfirmModal from '@/app/components/ui/ConfirmModal';
 import { Section } from '@/app/components/ui/Section';
+
 import { Button } from '../ui/Button';
 
 const NewsletterSchema = z.object({
@@ -26,8 +27,9 @@ export default function Newsletter(): JSX.Element {
     const result = NewsletterSchema.safeParse({ email });
 
     if (!result.success) {
-      const message = result.error.format().email?._errors?.[0];
+      const message = result.error.format().email?._errors[0];
       setError(message ?? 'Erreur inconnue');
+
       return;
     }
 
@@ -35,9 +37,7 @@ export default function Newsletter(): JSX.Element {
     setIsModalOpen(true);
   };
 
-  const confirmSubscription = () => {
-    console.log("Confirmation de l'inscription pour:", email);
-  };
+  const confirmSubscription = () => {};
 
   const cancelSubscription = () => {
     setIsModalOpen(false);
@@ -73,7 +73,9 @@ export default function Newsletter(): JSX.Element {
               onChange={e => setEmail(e.target.value)}
               className="flex-1 px-6 py-3 rounded-lg border border-gray-300 focus:outline-none text-black"
             />
-            {error && <p className="text-sm text-red-500 px-2">{error}</p>}
+            {typeof error === 'string' && (
+              <p className="text-sm text-red-500 px-2">{error}</p>
+            )}
             <motion.div
               className="self-end"
               whileHover={{ scale: 1.05 }}
