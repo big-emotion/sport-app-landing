@@ -39,7 +39,8 @@
     "title": "Soyez les premiers informés",
     "subtitle": "Inscrivez-vous à notre newsletter pour recevoir les dernières actualitées de Sport-App.",
     "placeholder": "Adresse email",
-    "button": "S'inscrire"
+    "button": "S'inscrire",
+    "invalid": "Adresse email invalide"
   },
   "faq": {
     "title": "Foire aux questions",
