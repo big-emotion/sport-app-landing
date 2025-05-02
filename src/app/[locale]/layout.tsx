@@ -39,7 +39,29 @@ export default async function LocaleLayout({
       return null;
     }
 
-    if (ENV === 'PROD') {
+    if (ENV === 'STAGING') {
+      return (
+        <script
+          id="usercentrics-cmp"
+          src="https://web.cmp.usercentrics.eu/ui/loader.js"
+          data-draft="true"
+          data-settings-id={COOKIE_BOT_ID}
+          async
+        ></script>
+      );
+    }
+    
+      return (
+        <>
+          <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
+          <script
+            id="usercentrics-cmp"
+            src="https://web.cmp.usercentrics.eu/ui/loader.js"
+            data-settings-id={COOKIE_BOT_ID}
+            async
+          ></script>
+        </>
+      );
       return (
         <>
           <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
