@@ -61,6 +61,19 @@
     "legal": "Mentions légales",
     "copyright": "© 2024"
   },
+  "confirmation": {
+    "title": "Merci pour votre inscription !",
+    "button": "Retour à l'accueil"
+  },
+  "modal": {
+    "title": "Confirmer l'inscription",
+    "subtitle": "Voulez-vous vraiment vous inscrire à la newsletter ?",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "confirm_title": "Un email de confirmation a été envoyé à votre adresse.",
+    "confirm_subtitle": "Veuillez cliquer sur le lien dans l'email pour finaliser votre inscription à la newsletter.",
+    "close": "Fermer"
+  },
   "metadata": {
     "title": "Sport-App - Trouvez des Terrains de Sport Près de Chez Vous",
     "description": "Découvrez et réservez les meilleurs terrains de sport dans votre région. Connectez-vous avec d'autres joueurs et organisez des parties facilement avec Sport-App."
