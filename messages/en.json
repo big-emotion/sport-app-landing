@@ -39,7 +39,8 @@
     "title": "Be the first to know",
     "subtitle": "Subscribe to our newsletter to receive the latest updates from Sport-App.",
     "placeholder": "Email address",
-    "button": "Subscribe"
+    "button": "Subscribe",
+    "invalid": "Invalid email address"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -60,6 +61,19 @@
     "title": "Sport-App",
     "legal": "Legal notices",
     "copyright": "© 2024"
+  },
+  "confirmation": {
+    "title": "Thank you for signing up!",
+    "button": "Back to homepage"
+  },
+  "modal": {
+    "title": "Confirm Subscription",
+    "subtitle": "Do you really want to subscribe to the newsletter?",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "confirm_title": "A confirmation email has been sent to your address.",
+    "confirm_subtitle": "Please click the link in the email to complete your newsletter subscription.",
+    "close": "Close"
   },
   "metadata": {
     "title": "Sport-App - Find Sports Venues Near You",
