@@ -40,7 +40,20 @@
     "subtitle": "Subscribe to our newsletter to receive the latest updates from Sport-App.",
     "placeholder": "Email address",
     "button": "Subscribe",
-    "invalid": "Invalid email address"
+    "invalid": "Invalid email address",
+    "unknownError": "An unknown error occurred",
+    "subscribing": "Subscribing...",
+    "errorWithStatus": "Error: {status}",
+    "subscriptionSuccessful": "Subscription successful!",
+    "fetchError": "Subscription fetch error",
+    "unexpectedError": "An unexpected error occurred",
+    "api": {
+      "subscriptionFailed": "Subscription failed. Please try again later.",
+      "emailAlreadySubscribed": "This email is already subscribed.",
+      "invalidEmail": "Invalid email address.",
+      "serverConfigError": "Server configuration error.",
+      "subscriptionSuccess": "Successfully subscribed!"
+    }
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -82,4 +95,4 @@
   "images": {
     "app_preview": "Sport-App interface preview"
   }
-} 
+}

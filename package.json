@@ -12,6 +12,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "framer-motion": "^12.7.4",
     "next": "15.3.1",
     "next-intl": "^4.0.2",
@@ -23,6 +24,7 @@
     "@eslint/eslintrc": "^3",
     "@eslint/js": "^9.25.1",
     "@tailwindcss/postcss": "^4",
+    "@types/mailchimp__mailchimp_marketing": "^3.0.21",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
