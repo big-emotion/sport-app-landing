@@ -40,7 +40,20 @@
     "subtitle": "Inscrivez-vous à notre newsletter pour recevoir les dernières actualitées de Sport-App.",
     "placeholder": "Adresse email",
     "button": "S'inscrire",
-    "invalid": "Adresse email invalide"
+    "invalid": "Adresse email invalide",
+    "unknownError": "Une erreur inconnue s'est produite",
+    "subscribing": "Inscription en cours...",
+    "errorWithStatus": "Erreur: {status}",
+    "subscriptionSuccessful": "Inscription réussie !",
+    "fetchError": "Erreur lors de l'inscription",
+    "unexpectedError": "Une erreur inattendue s'est produite",
+    "api": {
+      "subscriptionFailed": "L'inscription a échoué. Veuillez réessayer plus tard.",
+      "emailAlreadySubscribed": "Cet e-mail est déjà inscrit.",
+      "invalidEmail": "Adresse e-mail invalide.",
+      "serverConfigError": "Erreur de configuration du serveur.",
+      "subscriptionSuccess": "Inscription réussie !"
+    }
   },
   "faq": {
     "title": "Foire aux questions",
@@ -82,4 +95,4 @@
   "images": {
     "app_preview": "Aperçu de l'interface Sport-App"
   }
-} 
+}
