@@ -1,8 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import React, { JSX, useState } from 'react';
 
 import ConfirmModal from '@/app/components/ui/ConfirmModal';
 import { Section } from '@/app/components/ui/Section';
