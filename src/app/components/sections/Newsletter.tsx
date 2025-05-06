@@ -24,6 +24,8 @@ export default function Newsletter(): JSX.Element {
     console.warn('Spam détecté : champ honeypot rempli');
     return;
 
+    // eslint-disable-next-line no-undef
+    window.console.info('Formulaire soumis avec succès');
     setIsSubmitted(true); // Met à jour l'état pour afficher le message de confirmation
   };
 
