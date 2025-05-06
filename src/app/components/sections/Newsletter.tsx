@@ -1,6 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-i ntl';
+import React, { JSX } from 'react';
 
 import ConfirmModal from '@/app/components/ui/ConfirmModal';
 import { Section } from '@/app/components/ui/Section';
@@ -10,7 +12,15 @@ import { NewsletterForm } from './NewsletterForm';
 
 export default function Newsletter(): JSX.Element {
   const t = useTranslations('newsletter');
-  const [isSubmitted, setIsSubmitted] = useState(false); // État pour gérer la soumission
+
+  const {
+    isLoading,
+    formError,
+    apiMessage,
+    isModalOpen,
+    confirmSubscription,
+    cancelSubscription,
+  } = useNewsletterForm();
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,23 +29,16 @@ export default function Newsletter(): JSX.Element {
     const ribValue = (
       e.currentTarget.elements.namedItem('rib') as HTMLInputElement
     ).value;
-    console.warn('Spam détecté : champ honeypot rempli');
-    return;
 
-    // eslint-disable-next-line no-undef
-    window.console.info('Formulaire soumis avec succès');
-    setIsSubmitted(true); // Met à jour l'état pour afficher le message de confirmation
+    if (ribValue && ribValue.trim() !== '') {
+      // eslint-disable-next-line no-console
+      console.warn('Spam détecté : champ honeypot rempli');
+      return;
+    }
+
+    // eslint-disable-next-line no-console
+    console.info('Formulaire soumis avec succès');
   };
-
-  const {
-    isLoading,
-    formError,
-    apiMessage,
-    isModalOpen,
-    handleSubmit,
-    confirmSubscription,
-    cancelSubscription,
-  } = useNewsletterForm();
 
   return (
     <Section>
