@@ -1,9 +1,7 @@
 'use client';
 
-import React, { useState } from 'react'; // Combinez les imports de React et useState
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-
 import { JSX } from 'react';
 
 import { Section } from '@/app/components/ui/Section';
@@ -20,12 +18,10 @@ export default function Newsletter(): JSX.Element {
     const ribValue = (
       e.currentTarget.elements.namedItem('rib') as HTMLInputElement
     ).value;
-    if (ribValue && ribValue.trim() !== '') {
       console.warn('Spam détecté : champ honeypot rempli');
       return;
     }
 
-    console.info('Formulaire soumis avec succès');
     setIsSubmitted(true); // Met à jour l'état pour afficher le message de confirmation
   };
 
