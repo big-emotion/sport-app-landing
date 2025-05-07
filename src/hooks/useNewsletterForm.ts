@@ -54,6 +54,16 @@ export const useNewsletterForm = (): UseNewsletterFormReturn => {
     setFormError(null);
     setApiMessage(null);
     setEmailToConfirm(null);
+
+    // Honeypot field validation to detect spam bots
+    const ribValue = (
+      e.currentTarget.elements.namedItem('rib') as HTMLInputElement
+    ).value;
+    if (ribValue.trim() !== '') {
+      setFormError(t('spamDetected')); // Set an error message for spam detection
+
+      return; // Stop form submission if honeypot is filled
+    }
     const formData = new FormData(e.currentTarget);
     const email = formData.get('email');
 

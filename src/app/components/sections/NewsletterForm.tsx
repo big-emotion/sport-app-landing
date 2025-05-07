@@ -74,6 +74,12 @@ export const NewsletterForm = ({
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+      {/* Invisible honeypot field to prevent spam */}
+      <div aria-hidden="true" style={{ display: 'none' }}>
+        <label htmlFor="rib">RIB</label>
+        <input type="text" id="rib" name="rib" />
+      </div>
+
       <label htmlFor="newsletter-email" className="sr-only">
         {t('placeholder')}
       </label>
